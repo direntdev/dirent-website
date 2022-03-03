@@ -10,6 +10,9 @@ export const Navbar = () => {
         <Link href="/about">
           <a className="">about</a>
         </Link>
+        <Link href="https://mateusz-migas.gitbook.io/dirent-docs/">
+          <a className="">Docs</a>
+        </Link>
         <Link href="/roadmap">
           <a className="">Roadmap</a>
         </Link>
