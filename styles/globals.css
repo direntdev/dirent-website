@@ -11,5 +11,5 @@
 }
 
 body {
-  background: var(--color-background-1);
+  background: rgb(var(--color-background-1));
 }

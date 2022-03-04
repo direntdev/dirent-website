@@ -2,25 +2,7 @@ import Image from 'next/image';
 import { Layout } from '../components/layout';
 import type { NextPage } from 'next';
 
-const content = [
-  {
-    header: 'Developer friendly',
-    description: 'App made with love by developers and for developers',
-  },
-  {
-    header: '',
-    description:
-      'Everything you can do in Direct you can do from command palette',
-  },
-  {
-    header: 'Custom themes and looks',
-    description: 'Use one of the predefined themes or create your own',
-  },
-  {
-    header: 'More to come...',
-    description: `It's just the beginning. Check our roadmap for upcomming features`,
-  },
-];
+const content = [];
 
 const Section = (props: {
   header: string;
@@ -31,20 +13,22 @@ const Section = (props: {
 }) => {
   const { header, description, link, textPosition, children } = props;
   return (
-    <section className="p-10 gap-3 flex even:bg-skin-background3 odd:bg-skin-background2 justify-center items-center flex-col text-lg">
-      <h1 className="font-bold  text-2xl">{header}</h1>
-      <div
-        className={`flex ${
-          textPosition === 'top' ? 'flex-col' : 'flex-row-reverse'
-        } gap-3`}
-      >
-        <p className={`${textPosition === 'top' ? 'text-center' : ''}`}>
-          {description}
-          {link}
-        </p>
-        {children}
+    <section className="flex justify-center even:bg-skin-background3 odd:bg-skin-background2 ">
+      <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">
+        <h1 className="font-bold  text-2xl">{header}</h1>
+        <div
+          className={`flex ${
+            textPosition === 'top' ? 'flex-col' : 'flex-row-reverse'
+          } gap-3`}
+        >
+          <p className={`${textPosition === 'top' ? 'text-center' : ''}`}>
+            {description}
+            {link}
+          </p>
+          {children}
+        </div>
+        {link}
       </div>
-      {link}
     </section>
   );
 };
@@ -77,6 +61,21 @@ const Home: NextPage = () => {
         textPosition="top"
         header="Command palette you know and love"
         description={`Everything you can do in Direct you can do from command palette`}
+      ></Section>
+      <Section
+        textPosition="top"
+        header="Developer friendly"
+        description={'App made with love by developers and for developers'}
+      ></Section>
+      <Section
+        textPosition="top"
+        header="Custom themes and looks"
+        description={'Use one of the predefined themes or create your own'}
+      ></Section>
+      <Section
+        textPosition="top"
+        header="More to come..."
+        description={`It's just the beginning. Check our roadmap for upcomming features`}
       ></Section>
     </Layout>
   );
