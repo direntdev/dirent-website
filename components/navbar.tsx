@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const Navbar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-3 text-white">
+      <nav className="fixed h-16 inset-x-0 flex items-center justify-between flex-wrap bg-skin-background1 p-3 text-white">
         <Link href="/">
           <a className="flex items-center gap-2 font-mono">
             <Image alt="" src={'/logo.png'} width={24} height={24} />
@@ -42,3 +42,6 @@ export const Navbar = () => {
     </>
   );
 };
+
+// background-color: #4158D0;
+// background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 48%, #FFCC70 100%);

@@ -1,7 +1,8 @@
 export const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white fixed bottom-0 w-full">
-      footer here bla bla
+    <footer className="bg-skin-background1 text-white h-48 w-full">
+      footer here bla bsla footer here bla bsla footer here bla bsla footer here
+      bla bsla footer here bla bsla footer here bla bsla
     </footer>
   );
 };
