@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 export const Navbar = () => {
   return (
@@ -13,14 +12,21 @@ export const Navbar = () => {
           <a className="">about</a>
         </Link>
         <Link href="https://mateusz-migas.gitbook.io/dirent-docs/">
-          <a className="">Docs</a>
+          <a target="_blank" className="">
+            Docs
+          </a>
         </Link>
         <Link href="/roadmap">
           <a className="">Roadmap</a>
         </Link>
-        <Link href="/roadmap">
-          <a className="w-6 h-6">
-            <FontAwesomeIcon icon={faCoffee} />
+        <Link href="https://github.com/direntdev">
+          <a target="_blank" className="w-6 h-6">
+            <Image
+              alt="/github.png"
+              src={'/github.png'}
+              width={24}
+              height={24}
+            />
           </a>
         </Link>
       </nav>
