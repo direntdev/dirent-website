@@ -19,7 +19,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               // backgroundImage:'linear-gradient(110deg, rgba(1,0,22,1) 0%, rgba(55,55,55,1) 100%)',
             }
           }
-          className="pt-16 flex-grow bg-skin-background2 text-white"
+          className="flex-grow bg-skin-background2 text-white"
         >
           {children}
         </main>

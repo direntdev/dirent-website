@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Layout } from '../components/layout';
 import type { NextPage } from 'next';
 
@@ -23,11 +24,16 @@ const Section = (props: {
         >
           <p className={`${textPosition === 'top' ? 'text-center' : ''}`}>
             {description}
-            {link}
           </p>
           {children}
         </div>
-        {link}
+        {link && (
+          <Link href={link}>
+            <a target="_blank" className="">
+              Learn more
+            </a>
+          </Link>
+        )}
       </div>
     </section>
   );
@@ -50,7 +56,7 @@ const Home: NextPage = () => {
         </div>
       </Section>
       <Section
-        link="Dupa"
+        link="https://docs.dirent.dev/fundamentals/keybindings"
         textPosition="right"
         header="Your powertool"
         description={`Everything command can be executed with a keyboard's shortcut`}
