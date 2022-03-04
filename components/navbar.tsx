@@ -11,7 +11,7 @@ export const Navbar = () => {
             DIRENT
           </a>
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <Link href="/about">
             <a className="">About</a>
           </Link>
@@ -22,6 +22,9 @@ export const Navbar = () => {
           </Link>
           <Link href="/roadmap">
             <a className="">Roadmap</a>
+          </Link>
+          <Link href="/plugins">
+            <a className="">Plugins</a>
           </Link>
           <Link href="https://github.com/direntdev">
             <a target="_blank" className="w-6 h-6 invert">

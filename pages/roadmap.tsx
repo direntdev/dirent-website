@@ -15,6 +15,9 @@ const roadmap: RoadmapEntry[] = [
   },
   { icon: 'feature', title: 'Feature 2', description: 'Feature description 2' },
   { icon: 'feature', title: 'Feature 3', description: 'Feature description 3' },
+  { icon: 'feature', title: 'Feature 4', description: 'Feature description 4' },
+  { icon: 'feature', title: 'Feature 5', description: 'Feature description 5' },
+  { icon: 'feature', title: 'Feature 6', description: 'Feature description 6' },
 ];
 
 const RoadmapEntry = (props: { entry: RoadmapEntry }) => {
