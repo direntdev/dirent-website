@@ -13,12 +13,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <div className="flex flex-col overflow-auto h-full">
         <main
-          style={
-            {
-              // backgroundColor: '#rgb(1,0,22)',
-              // backgroundImage:'linear-gradient(110deg, rgba(1,0,22,1) 0%, rgba(55,55,55,1) 100%)',
-            }
-          }
+          style={{
+            // backgroundColor: '#rgb(1,0,0)',
+            backgroundImage:
+              'linear-gradient(90deg, rgba(0,0,0,0.30) 25%, rgba(255,255,255,0.30) 100%)',
+          }}
           className="flex-grow bg-skin-background2 text-white"
         >
           {children}

@@ -14,7 +14,7 @@ const Section = (props: {
 }) => {
   const { header, description, link, textPosition, children } = props;
   return (
-    <section className="flex justify-center even:bg-skin-background3 odd:bg-skin-background2 ">
+    <section className="flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 ">
       <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">
         <h1 className="font-bold  text-2xl">{header}</h1>
         <div
