@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Navbar = () => {
   return (
@@ -15,6 +17,11 @@ export const Navbar = () => {
         </Link>
         <Link href="/roadmap">
           <a className="">Roadmap</a>
+        </Link>
+        <Link href="/roadmap">
+          <a className="w-6 h-6">
+            <FontAwesomeIcon icon={faCoffee} />
+          </a>
         </Link>
       </nav>
     </>
