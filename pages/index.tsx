@@ -16,7 +16,7 @@ const Section = (props: {
   return (
     <section className="flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 ">
       <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">
-        <h1 className="font-bold  text-2xl">{header}</h1>
+        <h1 className="font-bold text-4xl">{header}</h1>
         <div
           className={`flex ${
             textPosition === 'top' ? 'flex-col' : 'flex-row-reverse'
