@@ -15,7 +15,7 @@ export const Navbar = () => {
           <Link href="/about">
             <a className="">About</a>
           </Link>
-          <Link href="https://mateusz-migas.gitbook.io/dirent-docs/">
+          <Link href="https://docs.dirent.dev/">
             <a target="_blank" className="">
               Docs
             </a>
