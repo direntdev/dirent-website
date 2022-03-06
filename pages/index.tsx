@@ -14,15 +14,25 @@ const Section = (props: {
 }) => {
   const { header, description, link, textPosition, children } = props;
   return (
-    <section className="flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 ">
+    <section
+      style={{
+        backgroundImage:
+          'linear-gradient(90deg, rgba(0,0,0,0.30) 25%, rgba(50,50,50,0.50) 100%)',
+      }}
+      className=" flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 "
+    >
       <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">
-        <h1 className="font-bold text-4xl">{header}</h1>
+        <h1 className="font-bold text-center text-4xl">{header}</h1>
         <div
           className={`flex ${
             textPosition === 'top' ? 'flex-col' : 'flex-row-reverse'
           } gap-3`}
         >
-          <p className={`${textPosition === 'top' ? 'text-center' : ''}`}>
+          <p
+            className={`font-thin ${
+              textPosition === 'top' ? 'text-center' : ''
+            }`}
+          >
             {description}
           </p>
           {children}
@@ -47,7 +57,7 @@ const Home: NextPage = () => {
       <Section
         textPosition="top"
         header="A beast behind minimalistic UI"
-        description={`Don't get distracted by UI, only show the stuff you need and for rest use keyboard`}
+        description={`Don't get distracted by the UI, only show the stuff that you need and for rest use keyboard for the rest`}
       >
         <div className="bg-bslue-200 flex items-center justify-center">
           <Image width={150} height={100} src="/theme_1.png"></Image>
@@ -59,7 +69,7 @@ const Home: NextPage = () => {
         link="https://docs.dirent.dev/fundamentals/keybindings"
         textPosition="right"
         header="Your powertool"
-        description={`Everything command can be executed with a keyboard's shortcut`}
+        description={`Every command command can be executed with a keyboard's shortcut`}
       >
         <Image width={500} height={350} src="/theme_1.png"></Image>
       </Section>
@@ -81,7 +91,7 @@ const Home: NextPage = () => {
       <Section
         textPosition="top"
         header="More to come..."
-        description={`It's just the beginning. Check our roadmap for upcomming features`}
+        description={`Check our roadmap for upcomming features`}
       ></Section>
     </Layout>
   );
