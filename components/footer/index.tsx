@@ -24,7 +24,7 @@ const navigation = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-skin-dark" aria-labelledby="footer-heading">
+    <footer className="z-10 bg-skin-dark" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

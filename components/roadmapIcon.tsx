@@ -1,8 +1,7 @@
 import {
-  StarIcon,
-  BadgeCheckIcon,
   QuestionMarkCircleIcon,
   CheckCircleIcon,
+  StarIcon,
 } from "@heroicons/react/solid";
 
 export const RoadmapIcon = (props: {
@@ -16,7 +15,7 @@ export const RoadmapIcon = (props: {
     case "milestone":
       return <StarIcon className="text-orange-500"></StarIcon>;
     case "planned":
-      return <BadgeCheckIcon className="text-blue-500" />;
+      return <CheckCircleIcon className="text-blue-500" />;
     case "maybe":
       return <QuestionMarkCircleIcon className="text-gray-500" />;
     default:
