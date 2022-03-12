@@ -18,14 +18,14 @@ const BackgroundLamp = (props: { className: string }) => {
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-screen flex-col text-white">
+    <div className="flex h-screen flex-col overflow-x-hidden text-white">
       <Head>
         <title>Dirent</title>
         <meta name="description" content="Dirent" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="mt-16 flex-grow bg-skin-medium">{children}</main>
+      <main className="mt-16 flex-grow  bg-skin-medium">{children}</main>
       <Footer />
     </div>
   );

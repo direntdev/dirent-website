@@ -124,7 +124,7 @@ const RoadmapPage: NextPage = () => {
   return (
     <Layout>
       <div className="relative mx-auto max-w-3xl py-12 px-6 text-center">
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0">
           <BackgroundLight className="left-0 top-[200px] h-[400px] w-[500px] -rotate-45 bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-1/3 top-[350px] h-[200px] w-[500px] -rotate-[20deg] bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-[50px] top-[500px] h-[200px] w-[150px] bg-skin-accent/30"></BackgroundLight>
