@@ -18,7 +18,7 @@ const BackgroundLamp = (props: { className: string }) => {
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-screen flex-col overflow-x-hidden text-white">
+    <div className="flex h-screen flex-col overflow-x-clip text-white">
       <Head>
         <title>Dirent</title>
         <meta name="description" content="Dirent" />
