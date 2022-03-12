@@ -153,7 +153,7 @@ const RoadmapPage: NextPage = () => {
                     </div>
                     <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1">
                       <div>
-                        <p>{event.content}</p>
+                        <p className="text-left">{event.content}</p>
                       </div>
                       <div className="whitespace-nowrap text-right">
                         <p className="text-skin-accent">{event.date}</p>
