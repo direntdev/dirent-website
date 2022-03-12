@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { Layout } from "../../components/layout";
-import { Person } from "./person";
+import { Layout } from "../components/layout";
+import { Person } from "../components/person";
 
 const people = [
   {
