@@ -15,10 +15,12 @@ const Section = (props: {
   const { header, description, link, textPosition, children } = props;
   return (
     <section
-      style={{
-        backgroundImage:
-          'linear-gradient(90deg, rgba(0,0,0,0.30) 25%, rgba(50,50,50,0.50) 100%)',
-      }}
+      style={
+        {
+          // backgroundImage:
+          //   'linear-gradient(90deg, rgba(0,0,0,0.30) 25%, rgba(50,50,50,0.50) 100%)',
+        }
+      }
       className=" flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 "
     >
       <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">

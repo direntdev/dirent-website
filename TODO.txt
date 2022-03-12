@@ -9,3 +9,6 @@ Blog?
 Nav:
 Pages
 Github link
+
+[Name    Roadmap, About us, PLugins, Docs, Blog?]
+Index - download, etc
