@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { BackgroundLight } from "../components/backgroundLight";
 import { Layout } from "../components/layout";
 import { Person } from "../components/person";
 
@@ -14,10 +15,13 @@ const people = [
 const AboutPage: NextPage = () => {
   return (
     <Layout>
-      <div className="mx-auto max-w-5xl py-12 px-6 text-center">
+      <div className="relative mx-auto max-w-5xl py-12 px-6 text-center">
+        <div className="absolute inset-0">
+          <BackgroundLight className="left-[100px] top-[100px] h-[200px] w-[350px] -rotate-[5deg] bg-skin-accent/20"></BackgroundLight>
+        </div>
         <div className="space-y-8">
           <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-extrabold  tracking-tight text-skin-accent sm:text-4xl">
               Our Team
             </h2>
             <p className="text-xl">
