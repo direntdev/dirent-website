@@ -1,0 +1,42 @@
+import type { NextPage } from "next";
+import { Layout } from "../../components/layout";
+import { Person } from "./person";
+
+const people = [
+  {
+    name: "Migas Mateusz",
+    role: "Co-Founder",
+    imageUrl:
+      "https://avatars.githubusercontent.com/u/54471371?s=400&u=f60177433b8ad5b15b423d195527f0f9be8ec066&v=4",
+  },
+];
+
+const AboutPage: NextPage = () => {
+  return (
+    <Layout>
+      <div className="mx-auto max-w-5xl py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+        <div className="space-y-8 sm:space-y-12">
+          <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              Our Team
+            </h2>
+            <p className="text-xl">
+              We are a small team but we are passionate about the software that
+              we are building.
+            </p>
+          </div>
+          <ul
+            role="list"
+            className="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6"
+          >
+            {people.map(person => (
+              <Person key={person.name} {...person} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default AboutPage;

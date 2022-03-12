@@ -4,9 +4,10 @@
 
 @layer base {
   :root {
-    --color-background-1: 15 4 37;
-    --color-background-2: 18 4 49;
-    --color-background-3: 27 5 72;
+    --color-background-dark: 20 40 80;
+    --color-background-medium: 40 60 100;
+    --color-background-light: 60 80 120;
+    --color-accent: 0 220 220;
   }
 }
 

@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Layout } from '../components/layout';
-import type { NextPage } from 'next';
+import Image from "next/image";
+import Link from "next/link";
+import { Layout } from "../components/layout";
+import type { NextPage } from "next";
 
 const content = [];
 
 const Section = (props: {
   header: string;
   description: string;
-  textPosition: 'right' | 'top';
+  textPosition: "right" | "top";
   link?: string;
   children?: React.ReactNode;
 }) => {
@@ -21,18 +21,18 @@ const Section = (props: {
           //   'linear-gradient(90deg, rgba(0,0,0,0.30) 25%, rgba(50,50,50,0.50) 100%)',
         }
       }
-      className=" flex justify-center even:bg-skin-background3/75 odd:bg-skin-background2/75 "
+      className=" flex justify-center odd:bg-skin-medium/75 even:bg-skin-light/75 "
     >
-      <div className="justify-center items-center flex-col text-lg p-10 gap-3 flex  max-w-[700px]">
-        <h1 className="font-bold text-center text-4xl">{header}</h1>
+      <div className="flex max-w-[700px] flex-col items-center justify-center gap-3 p-10  text-lg">
+        <h1 className="text-center text-4xl font-bold">{header}</h1>
         <div
           className={`flex ${
-            textPosition === 'top' ? 'flex-col' : 'flex-row-reverse'
+            textPosition === "top" ? "flex-col" : "flex-row-reverse"
           } gap-3`}
         >
           <p
             className={`font-thin ${
-              textPosition === 'top' ? 'text-center' : ''
+              textPosition === "top" ? "text-center" : ""
             }`}
           >
             {description}
@@ -55,7 +55,6 @@ const Home: NextPage = () => {
   //3 colors
   return (
     <Layout>
-      {/* File management. Redefined! */}
       <Section
         textPosition="top"
         header="A beast behind minimalistic UI"
@@ -83,12 +82,12 @@ const Home: NextPage = () => {
       <Section
         textPosition="top"
         header="Developer friendly"
-        description={'App made with love by developers and for developers'}
+        description={"App made with love by developers and for developers"}
       ></Section>
       <Section
         textPosition="top"
         header="Custom themes and looks"
-        description={'Use one of the predefined themes or create your own'}
+        description={"Use one of the predefined themes or create your own"}
       ></Section>
       <Section
         textPosition="top"

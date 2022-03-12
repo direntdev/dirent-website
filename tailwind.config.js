@@ -8,18 +8,19 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         skin: {
-          background1: withOpacityValue('--color-background-1'),
-          background2: withOpacityValue('--color-background-2'),
-          background3: withOpacityValue('--color-background-3'),
+          dark: withOpacityValue("--color-background-dark"),
+          medium: withOpacityValue("--color-background-medium"),
+          light: withOpacityValue("--color-background-light"),
+          accent: withOpacityValue("--color-accent"),
         },
       },
     },

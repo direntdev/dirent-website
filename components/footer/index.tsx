@@ -1,4 +1,5 @@
-import { routes } from '../utils/routes';
+import { FooterColumn } from "./footerColumn";
+import { routes } from "../../utils/routes";
 
 const navigation = {
   product: [routes.roadmap, routes.plugins, routes.docs],
@@ -6,7 +7,7 @@ const navigation = {
   legal: [routes.privacy, routes.terms],
   social: [
     {
-      name: 'GitHub',
+      name: "GitHub",
       href: routes.github.href,
       icon: (props: { className: string }) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -21,40 +22,14 @@ const navigation = {
   ],
 };
 
-const FooterColumn = (props: {
-  name: string;
-  items: { name: string; href: string }[];
-}) => {
-  const { name, items } = props;
-  return (
-    <div className="flex flex-col">
-      <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-        {name}
-      </h3>
-      <ul role="list" className="mt-4 space-y-4">
-        {items.map(item => (
-          <li key={item.name} className="text-2center">
-            <a
-              href={item.href}
-              className="text-base text-gray-300 hover:text-white "
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800" aria-labelledby="footer-heading">
+    <footer className="bg-skin-dark" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-5xl mx-auto py-6 px-4">
-        <div className="max-w-3xl justify-center mx-auto grid grid-cols-3 gap-8">
+      <div className="mx-auto max-w-5xl py-6 px-4">
+        <div className="mx-auto grid max-w-3xl grid-cols-3 justify-center gap-8">
           <FooterColumn name="Product" items={navigation.product} />
           <FooterColumn name="Company" items={navigation.company} />
           <FooterColumn name="legal" items={navigation.legal} />
@@ -72,7 +47,7 @@ export const Footer = () => {
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
             &copy; 2022 Dirent. All rights reserved.
           </p>
         </div>

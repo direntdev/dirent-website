@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
-import { Layout } from '../components/layout';
-import roadmapContent from './roadmap.json';
+import type { NextPage } from "next";
+import { Layout } from "../components/layout";
+import roadmapContent from "./roadmap.json";
 
 type RoadmapEntry = {
-  icon: 'feature';
+  icon: "feature";
   title: string;
   description: string;
 };
