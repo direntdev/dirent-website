@@ -47,7 +47,13 @@ const Home: NextPage = () => {
           <BackgroundLight className="left-1/3 top-[350px] h-[200px] w-[500px] -rotate-[20deg] bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-[50px] top-[500px] h-[200px] w-[150px] bg-skin-accent/30"></BackgroundLight>
         </div>
-        <div className="">
+        {/* <div>
+          Meet the file management redefined. Simple and extensible tool for
+          everyday use that supercharges users. Optimize your workflows with
+          keyboard-first navigation and manage your files with confidence and
+          ease.
+        </div> */}
+        <div>
           {middleSections.map((section, index) => (
             <div
               key={index}

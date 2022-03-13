@@ -18,8 +18,8 @@ export const SectionWithImage = (props: {
       }`}
     >
       <div
-        className={`relative space-y-3 md:col-start-${
-          imagePosition === "left" ? 1 : 2
+        className={`relative space-y-3 ${
+          imagePosition === "left" ? "md:col-start-1" : "md:col-start-2"
         }`}
       >
         <h3 className="section-header">{header}</h3>
