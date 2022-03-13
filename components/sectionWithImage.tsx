@@ -30,7 +30,7 @@ export const SectionWithImage = (props: {
           </Link>
         )}
       </div>
-      <div className="lg:col-start-1s mx-auto md:order-last" aria-hidden="true">
+      <div className="mx-auto md:order-last" aria-hidden="true">
         <Image alt="" width={800} height={600} src={imageSrc}></Image>
       </div>
     </div>
