@@ -2,88 +2,65 @@ import Image from "next/image";
 import Link from "next/link";
 import { Layout } from "../components/layout";
 import type { NextPage } from "next";
+import { SectionWithImage } from "../components/sectionWithImage";
+import { BackgroundLight } from "../components/backgroundLight";
 
-const Section = (props: {
+const middleSections: {
   header: string;
   description: string;
-  textPosition: "right" | "top";
-  link?: string;
-  children?: React.ReactNode;
-}) => {
-  const { header, description, link, textPosition, children } = props;
-  return (
-    <section className=" flex justify-center odd:bg-skin-medium/75 even:bg-skin-light/75 ">
-      <div className="flex max-w-[700px] flex-col items-center justify-center gap-3 p-10  text-lg">
-        <h1 className="text-center text-4xl font-bold">{header}</h1>
-        <div
-          className={`flex ${
-            textPosition === "top" ? "flex-col" : "flex-row-reverse"
-          } gap-3`}
-        >
-          <p
-            className={`font-thin ${
-              textPosition === "top" ? "text-center" : ""
-            }`}
-          >
-            {description}
-          </p>
-          {children}
-        </div>
-        {link && (
-          <Link href={link}>
-            <a target="_blank" className="">
-              Learn more
-            </a>
-          </Link>
-        )}
-      </div>
-    </section>
-  );
-};
+  imageSrc: string;
+  href?: string;
+}[] = [
+  {
+    header: `Cross platform`,
+    description: `Dirent runs on MacOS and Windows, and will be on Linux soon. Looks similar across platforms but takes advantage of system APIs when needed.`,
+    href: "ssss",
+    imageSrc: "/theme_1.png",
+  },
+  {
+    header: `Extensible and customizable`,
+    description: `Modify or create your own themes, icons, and shortcuts. Define custom commands to interact with the system and other apps. Plugins system coming soon.`,
+    href: "ssss",
+    imageSrc: "/theme_2.png",
+  },
+  {
+    header: `Command palette`,
+    description: `Powerful command palette you know and love. Everything you can do in Direct is accessible from the command palette so you don't have to remember all the shortcuts.`,
+    href: "ssss",
+    imageSrc: "/theme_3.png",
+  },
+  {
+    header: `Fast and secure`,
+    description: `Beautiful and responsive Web UI combined with native code performance for file operations. Dirent is completely offline and no data is ever sent to the server.`,
+    href: "ssss",
+    imageSrc: "/theme_1.png",
+  },
+];
 
 const Home: NextPage = () => {
-  //3 colors
   return (
     <Layout>
-      <Section
-        textPosition="top"
-        header="A beast behind minimalistic UI"
-        description={`Don't get distracted by the UI, only show the stuff that you need and for rest use keyboard for the rest`}
-      >
-        <div className="bg-bslue-200 flex items-center justify-center">
-          <Image width={150} height={100} src="/theme_1.png"></Image>
-          <Image width={150} height={100} src="/theme_2.png"></Image>
-          <Image width={150} height={100} src="/theme_3.png"></Image>
+      <div className="relative">
+        <div className="absolute inset-0 mx-auto max-w-5xl px-6 py-12">
+          <BackgroundLight className="left-0 top-[200px] h-[400px] w-[500px] -rotate-45 bg-skin-accent/20"></BackgroundLight>
+          <BackgroundLight className="left-1/3 top-[350px] h-[200px] w-[500px] -rotate-[20deg] bg-skin-accent/20"></BackgroundLight>
+          <BackgroundLight className="left-[50px] top-[500px] h-[200px] w-[150px] bg-skin-accent/30"></BackgroundLight>
         </div>
-      </Section>
-      <Section
-        link="https://docs.dirent.dev/fundamentals/keybindings"
-        textPosition="right"
-        header="Your powertool"
-        description={`Every command command can be executed with a keyboard's shortcut`}
-      >
-        <Image width={500} height={350} src="/theme_1.png"></Image>
-      </Section>
-      <Section
-        textPosition="top"
-        header="Command palette you know and love"
-        description={`Everything you can do in Direct you can do from command palette`}
-      ></Section>
-      <Section
-        textPosition="top"
-        header="Developer friendly"
-        description={"App made with love by developers and for developers"}
-      ></Section>
-      <Section
-        textPosition="top"
-        header="Custom themes and looks"
-        description={"Use one of the predefined themes or create your own"}
-      ></Section>
-      <Section
-        textPosition="top"
-        header="More to come..."
-        description={`Check our roadmap for upcomming features`}
-      ></Section>
+        <div className="">
+          {middleSections.map((section, index) => (
+            <div
+              key={index}
+              className="px-6 py-12 odd:bg-skin-medium/75 even:bg-skin-light/75"
+            >
+              <SectionWithImage
+                className={"mx-auto max-w-5xl"}
+                imagePosition={index % 2 === 0 ? "left" : "right"}
+                {...section}
+              ></SectionWithImage>
+            </div>
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };

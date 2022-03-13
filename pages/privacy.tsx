@@ -12,7 +12,7 @@ const PrivacyPage: NextPage = () => {
           <BackgroundLight className="left-[200px] top-[400px] h-[200px] w-[350px] -rotate-[15deg] bg-skin-accent/20"></BackgroundLight>
         </div>
         <div className="space-y-8">
-          <h2 className="section-header">Privacy Policy for Dirent</h2>
+          <h2 className="section-header">Privacy Policy</h2>
           <p>
             At Dirent, accessible from www.dirent.dev, one of our main
             priorities is the privacy of our visitors. This Privacy Policy
