@@ -6,7 +6,7 @@ const PrivacyPage: NextPage = () => {
   return (
     <Layout>
       <div className="relative mx-auto max-w-5xl py-12 px-6">
-        <div className="absolute inset-0">
+        <div className="pointer-events-none absolute inset-0">
           <BackgroundLight className="left-[100px] top-[100px] h-[200px] w-[350px] -rotate-[5deg] bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-[600px] top-[300px] h-[200px] w-[350px] rotate-[25deg] bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-[200px] top-[400px] h-[200px] w-[350px] -rotate-[15deg] bg-skin-accent/20"></BackgroundLight>
