@@ -1,20 +1,6 @@
-import { Navbar } from "./navbar";
-import { Footer } from "./footer";
 import Head from "next/head";
-
-const BackgroundLamp = (props: { className: string }) => {
-  return (
-    <div
-      style={
-        {
-          // backgroundImage:
-          // 'linear-gradient(90deg, rgba(100,100,100,0.20) 25%, rgba(255,255,255,0.20) 100%)',
-        }
-      }
-      className={`h-[600px] w-[400px] bg-white/10  blur-2xl ${props.className}`}
-    ></div>
-  );
-};
+import { Footer } from "./footer";
+import { Navbar } from "./navbar";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
