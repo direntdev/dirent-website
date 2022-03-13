@@ -4,6 +4,7 @@ import { Layout } from "../components/layout";
 import type { NextPage } from "next";
 import { SectionWithImage } from "../components/sectionWithImage";
 import { BackgroundLight } from "../components/backgroundLight";
+import { routes } from "../utils/routes";
 
 const middleSections: {
   header: string;
@@ -14,26 +15,26 @@ const middleSections: {
   {
     header: `Cross platform`,
     description: `Dirent runs on MacOS and Windows, and will be on Linux soon. Looks similar across platforms but takes advantage of system APIs when needed.`,
-    href: "ssss",
-    imageSrc: "/theme_1.png",
-  },
-  {
-    header: `Extensible and customizable`,
-    description: `Modify or create your own themes, icons, and shortcuts. Define custom commands to interact with the system and other apps. Plugins system coming soon.`,
-    href: "ssss",
-    imageSrc: "/theme_2.png",
+    href: "https://docs.dirent.dev/guides/platform-support",
+    imageSrc: "/app-all.png",
   },
   {
     header: `Command palette`,
     description: `Powerful command palette you know and love. Everything you can do in Direct is accessible from the command palette so you don't have to remember all the shortcuts.`,
-    href: "ssss",
-    imageSrc: "/theme_3.png",
+    href: "https://docs.dirent.dev/guides/command-palette",
+    imageSrc: "/command-palette.png",
   },
   {
     header: `Fast and secure`,
     description: `Beautiful and responsive Web UI combined with native code performance for file operations. Dirent is completely offline and no data is ever sent to the server.`,
-    href: "ssss",
-    imageSrc: "/theme_1.png",
+    href: "https://docs.dirent.dev/guides/architecture",
+    imageSrc: "/app-light.png",
+  },
+  {
+    header: `Extensible and customizable`,
+    description: `Modify or create your own themes, icons, and shortcuts. Define custom commands to interact with the system and other apps. Plugins system coming soon.`,
+    href: "https://docs.dirent.dev/customization/custom-commands",
+    imageSrc: "/extensible.png",
   },
 ];
 
@@ -50,7 +51,9 @@ const Home: NextPage = () => {
           {middleSections.map((section, index) => (
             <div
               key={index}
-              className="px-6 py-12 odd:bg-skin-medium/75 even:bg-skin-light/75"
+              className={`px-6 py-12 ${
+                index % 2 === 0 ? "bg-skin-medium" : "bg-skin-light/50"
+              }`}
             >
               <SectionWithImage
                 className={"mx-auto max-w-5xl"}
@@ -59,6 +62,14 @@ const Home: NextPage = () => {
               ></SectionWithImage>
             </div>
           ))}
+        </div>
+        <div
+          className={`relative items-center space-y-3 px-6  py-12 text-center`}
+        >
+          <p className="text-lg">{"Want more? Check our roadmap!"}</p>
+          <Link href={routes.roadmap.href}>
+            <a className="text-blue-500">Learn more</a>
+          </Link>
         </div>
       </div>
     </Layout>
