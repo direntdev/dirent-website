@@ -123,17 +123,15 @@ const timeline: {
 const RoadmapPage: NextPage = () => {
   return (
     <Layout>
-      <div className="relative mx-auto max-w-5xl py-12 px-6 text-center">
+      <div className="relative mx-auto max-w-3xl py-12 px-6 text-center">
         <div className="absolute inset-0">
           <BackgroundLight className="left-0 top-[200px] h-[400px] w-[500px] -rotate-45 bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-1/3 top-[350px] h-[200px] w-[500px] -rotate-[20deg] bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-[50px] top-[500px] h-[200px] w-[150px] bg-skin-accent/30"></BackgroundLight>
         </div>
         <div className="space-y-8">
-          <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-            <h2 className="text-3xl font-extrabold tracking-tight text-skin-accent sm:text-4xl">
-              Roadmap
-            </h2>
+          <div className="section-container">
+            <h2 className="section-header">Roadmap</h2>
             <p className="text-xl">This roadmap is subject to change.</p>
           </div>
           <ul role="list" className="-mb-8">

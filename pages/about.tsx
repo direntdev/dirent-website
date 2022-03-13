@@ -20,10 +20,8 @@ const AboutPage: NextPage = () => {
           <BackgroundLight className="left-[100px] top-[100px] h-[200px] w-[350px] -rotate-[5deg] bg-skin-accent/20"></BackgroundLight>
         </div>
         <div className="space-y-8">
-          <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-            <h2 className="text-3xl font-extrabold  tracking-tight text-skin-accent sm:text-4xl">
-              Our Team
-            </h2>
+          <div className="section-container">
+            <h2 className="section-header">Our Team</h2>
             <p className="text-xl">
               We are a small team but we are passionate about the software that
               we are building.
