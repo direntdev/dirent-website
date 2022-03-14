@@ -8,7 +8,7 @@ export const routes = {
     name: "About",
   },
   contact: {
-    href: "mailto: abc@example.com",
+    href: "mailto: contact@dirent.dev",
     name: "Contact",
   },
   roadmap: {
