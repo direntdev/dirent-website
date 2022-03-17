@@ -1,12 +1,15 @@
 import { CompositeLogo } from "./compositeLogo";
 import { FormEvent, useState } from "react";
+import { Spinner } from "./spinner";
 
 export const MainSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState("");
   const [subscribeResult, setSubscribeResult] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     fetch("api/mailingList", {
       method: "PUT",
       body: JSON.stringify({
@@ -15,6 +18,7 @@ export const MainSection = () => {
     })
       .then(response => response.json())
       .then(response => {
+        setIsSubmitting(false);
         setSubscribeResult(response.message);
         setEmail("");
       })
@@ -40,7 +44,7 @@ export const MainSection = () => {
           Optimize your workflows with keyboard-first navigation and manage your
           files with confidence and ease.
         </p>
-        <div className="mt-10 sm:mt-12">
+        <div className="mt-10 sm:mt-16">
           <form
             onSubmit={handleSubmit}
             className="sm:mx-auto sm:max-w-xl lg:mx-0"
@@ -56,21 +60,22 @@ export const MainSection = () => {
                   required={true}
                   value={email}
                   onChange={e => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+                  placeholder={subscribeResult || "Enter your email"}
                   className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-skin-accent focus:ring-offset-2 focus:ring-offset-gray-900"
                 />
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <button
                   type="submit"
-                  className="block w-full rounded-md bg-skin-accent/80 py-3 px-4 font-medium text-white shadow hover:bg-skin-accent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
+                  className="flex h-12 w-full items-center justify-center rounded-md bg-skin-accent/80 py-3 px-4 font-medium text-white shadow hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 sm:w-[168px]"
                 >
-                  Notify when ready
+                  {isSubmitting ? (
+                    <Spinner></Spinner>
+                  ) : (
+                    <span>Notify when ready</span>
+                  )}
                 </button>
               </div>
-            </div>
-            <div className="bsg-blue-50 mt-4 h-6 sm:mt-0 sm:ml-3 sm:text-left">
-              {subscribeResult}
             </div>
           </form>
         </div>
