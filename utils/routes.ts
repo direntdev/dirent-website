@@ -36,7 +36,7 @@ export const routes = {
     name: "Terms",
   },
   blog: {
-    href: "https://blog.dirent.dev",
+    href: "https://dev.to/dirent",
     name: "Blog",
   },
 };
