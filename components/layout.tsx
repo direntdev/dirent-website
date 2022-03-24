@@ -11,7 +11,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="mt-16 flex-grow  bg-skin-medium">{children}</main>
+      <main className="mt-16 flex-grow bg-skin-medium">{children}</main>
       <Footer />
     </div>
   );

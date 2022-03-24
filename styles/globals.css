@@ -18,6 +18,35 @@
   .section-header {
     @apply text-3xl font-extrabold tracking-tight text-skin-accent sm:text-4xl;
   }
+
+  @keyframes rotate {
+    0% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(0deg);
+    }
+    20% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(0deg);
+    }
+    30% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(180deg);
+    }
+    70% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(180deg);
+    }
+    80% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(360deg);
+    }
+    100% {
+      transform: perspective(500px) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+
+  .spin-z {
+    animation: rotate 12s ease-in-out infinite;
+  }
+
+  .spin-z-reverse {
+    animation: rotate 12s ease-in-out infinite reverse;
+  }
 }
 
 body {

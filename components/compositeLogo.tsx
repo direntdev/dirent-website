@@ -1,28 +1,38 @@
-const Outter = (props: { offset: number; className?: string }) => {
+const Outter = (props: {
+  delaySec: number;
+  offset: number;
+  className?: string;
+}) => {
   return (
     <img
-      className={`absolute rounded-[70px] rounded  ${props.className}`}
+      className={`spin-z absolute rounded-[70px] rounded  ${props.className}`}
       style={{
         right: `${props.offset}px`,
         width: "75%",
         height: "75%",
-        transform: " perspective(500px) rotateY(-45deg)",
+        transform: "perspective(500px) rotateY(-45deg)",
+        animationDelay: `${props.delaySec}s`,
       }}
       src="./logo-outter.svg"
     ></img>
   );
 };
 
-const Inner = (props: { offset: number; className?: string }) => {
+const Inner = (props: {
+  delaySec: number;
+  offset: number;
+  className?: string;
+}) => {
   return (
     <img
       style={{
         right: `${props.offset}px`,
         width: "75%",
         height: "75%",
-        transform: " perspective(500px) rotateY(-45deg)",
+        transform: "perspective(500px) rotateY(-45deg)",
+        animationDelay: `${props.delaySec}s`,
       }}
-      className="absolute rounded-[70px] bg-gray-900/50"
+      className="spin-z-reverse absolute rounded-[70px] bg-gray-900/50"
       src="./logo-inner.svg"
     ></img>
   );
@@ -36,11 +46,11 @@ export const CompositeLogo = () => {
   };
   return (
     <div className="relative flex h-[400px] w-[400px] items-center justify-center">
-      <Outter offset={getOffset()} />
-      <Inner offset={getOffset()} />
-      <Outter offset={getOffset()} />
-      <Inner offset={getOffset()} />
-      <Outter offset={getOffset()} />
+      <Outter delaySec={1.6} offset={getOffset()} />
+      <Inner delaySec={1.2} offset={getOffset()} />
+      <Outter delaySec={0.8} offset={getOffset()} />
+      <Inner delaySec={0.4} offset={getOffset()} />
+      <Outter delaySec={0} offset={getOffset()} />
     </div>
   );
 };
