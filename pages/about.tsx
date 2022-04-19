@@ -1,12 +1,12 @@
+import { BackgroundLight } from '../components/backgroundLight';
+import { Layout } from '../components/layout';
+import { Person } from '../components/person';
 import type { NextPage } from "next";
-import { BackgroundLight } from "../components/backgroundLight";
-import { Layout } from "../components/layout";
-import { Person } from "../components/person";
 
 const people = [
   {
     name: "Migas Mateusz",
-    role: "Co-Founder",
+    role: "Founder",
     imageUrl:
       "https://avatars.githubusercontent.com/u/54471371?s=400&u=f60177433b8ad5b15b423d195527f0f9be8ec066&v=4",
   },
