@@ -1,6 +1,6 @@
-import { CompositeLogo } from "./compositeLogo";
-import { FormEvent, useState } from "react";
-import { Spinner } from "./spinner";
+import { CompositeLogo } from './compositeLogo';
+import { FormEvent, useState } from 'react';
+import { Spinner } from './spinner';
 
 export const MainSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,7 +29,7 @@ export const MainSection = () => {
 
   return (
     <div className="text-center lg:grid lg:grid-flow-row-dense lg:grid-cols-[1fr_400px] lg:gap-8 lg:text-left">
-      <div className="mx-auto w-[400px] lg:col-start-2">
+      <div className="mx-auto w-full max-w-[400px] lg:col-start-2">
         <CompositeLogo></CompositeLogo>
       </div>
       <div className="">

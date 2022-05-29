@@ -5,12 +5,12 @@ const Outter = (props: {
 }) => {
   return (
     <img
-      className={`spin-z absolute rounded-[70px] rounded  ${props.className}`}
+      className={`spin-z round absolute rounded-[15%] ${props.className}`}
       style={{
-        right: `${props.offset}px`,
+        right: `${props.offset}%`,
         width: "75%",
         height: "75%",
-        transform: "perspective(500px) rotateY(-45deg)",
+        transform: "perspective(15cm) rotateY(-45deg)",
         animationDelay: `${props.delaySec}s`,
       }}
       src="./logo-outter.svg"
@@ -26,13 +26,13 @@ const Inner = (props: {
   return (
     <img
       style={{
-        right: `${props.offset}px`,
+        right: `${props.offset}%`,
         width: "75%",
         height: "75%",
-        transform: "perspective(500px) rotateY(-45deg)",
+        transform: "perspective(15cm) rotateY(-45deg)",
         animationDelay: `${props.delaySec}s`,
       }}
-      className="spin-z-reverse absolute rounded-[70px] bg-gray-900/50"
+      className="spin-z-reverse absolute flex-1 rounded-[22%] bg-gray-900/50"
       src="./logo-inner.svg"
     ></img>
   );
@@ -41,11 +41,14 @@ const Inner = (props: {
 export const CompositeLogo = () => {
   let offset = 0;
   const getOffset = () => {
-    offset += 25;
+    offset += 6;
+    console.log(offset);
+
     return offset;
   };
+
   return (
-    <div className="relative flex h-[400px] w-[400px] items-center justify-center">
+    <div className="relative flex aspect-square h-full w-full items-center justify-center">
       <Outter delaySec={1.6} offset={getOffset()} />
       <Inner delaySec={1.2} offset={getOffset()} />
       <Outter delaySec={0.8} offset={getOffset()} />
