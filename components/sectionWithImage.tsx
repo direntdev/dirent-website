@@ -1,5 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link';
+import { LightboxImage } from './lightboxImage';
+import 'react-image-lightbox/style.css';
 
 export const SectionWithImage = (props: {
   header: string;
@@ -31,7 +32,7 @@ export const SectionWithImage = (props: {
         )}
       </div>
       <div className="mx-auto md:order-last" aria-hidden="true">
-        <Image alt="" width={800} height={600} src={imageSrc}></Image>
+        <LightboxImage src={imageSrc} />
       </div>
     </div>
   );
