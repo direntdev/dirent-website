@@ -12,6 +12,7 @@ export const LightboxImage = (props: { src: string }) => {
         document.body.style.overflow = "hidden";
         setIsOpen(true);
       }}
+      className="cursor-pointer"
     >
       {isOpen && (
         <Lightbox
