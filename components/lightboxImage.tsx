@@ -9,13 +9,14 @@ export const LightboxImage = (props: { src: string }) => {
   return (
     <div
       onClick={() => {
-        document.body.style.overflow = "hidden";
-        setIsOpen(true);
+        document.body.style.overflow = isOpen ? "auto" : "hidden";
+        setIsOpen(state => !state);
       }}
       className="cursor-pointer"
     >
       {isOpen && (
         <Lightbox
+          clickOutsideToClose={false}
           mainSrc={props.src}
           imagePadding={50}
           enableZoom={false}
