@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Layout } from "../components/layout";
+import Image from 'next/image';
+import Link from 'next/link';
+import { BackgroundLight } from '../components/backgroundLight';
+import { Layout } from '../components/layout';
+import { MainSection } from '../components/mainSection';
+import { routes } from '../utils/routes';
+import { SectionWithImage } from '../components/sectionWithImage';
 import type { NextPage } from "next";
-import { SectionWithImage } from "../components/sectionWithImage";
-import { BackgroundLight } from "../components/backgroundLight";
-import { routes } from "../utils/routes";
-import { MainSection } from "../components/mainSection";
 
 const middleSections: {
   header: string;
@@ -29,7 +29,7 @@ const middleSections: {
     header: `Fast and secure`,
     description: `Beautiful and responsive Web UI combined with native code performance for file operations. Dirent is completely offline and no data is ever sent to the server.`,
     href: "https://docs.dirent.dev/guides/architecture",
-    imageSrc: "/app-light.png",
+    imageSrc: "/secure.png",
   },
   {
     header: `Extensible and customizable`,
