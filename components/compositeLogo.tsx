@@ -42,8 +42,6 @@ export const CompositeLogo = () => {
   let offset = 0;
   const getOffset = () => {
     offset += 6;
-    console.log(offset);
-
     return offset;
   };
 
