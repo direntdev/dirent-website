@@ -34,7 +34,7 @@ export const MainSection = () => {
       </div>
       <div className="">
         <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-          <span className="block">File2 management</span>
+          <span className="block">File management</span>
           <span className="block bg-clip-text pb-3 text-skin-accent sm:pb-5">
             redefined
           </span>
