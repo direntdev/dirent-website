@@ -20,7 +20,7 @@ export const MainSection = () => {
         </p>
         <div className="mt-10 flex items-center justify-center sm:mt-16 lg:block">
           <a
-            href="https://github.com/direntdev/dirent/releases/download/v0.2.0/Dirent-0.2.0-arm64.dmg"
+            href="https://github.com/direntdev/dirent/releases/download/v0.2.0/Dirent-0.2.2-arm64.dmg"
             type="submit"
             className="flex h-12 w-fit rounded-md bg-skin-accent/80 py-3 px-4 font-medium text-white shadow hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 "
           >
