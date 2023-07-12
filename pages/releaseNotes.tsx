@@ -4,11 +4,9 @@ import { Layout } from "../components/layout";
 import type { NextPage } from "next";
 import { ReleaseNotesData } from "./api/releaseNotes";
 
-type ReleaseNotesPageProps = {
-  releases: ReleaseNotesData["releases"];
-};
-
-const ReleaseNotesPage: NextPage = (props: ReleaseNotesData) => {
+const ReleaseNotesPage: NextPage<ReleaseNotesData> = (
+  props: ReleaseNotesData
+) => {
   return (
     <Layout>
       <div className="relative mx-auto max-w-3xl py-12 px-6 text-center">
