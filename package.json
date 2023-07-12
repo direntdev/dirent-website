@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/kv": "^0.2.2",
     "autoprefixer": "^10.4.2",
     "next": "12.1.0",
     "postcss": "^8.4.7",
