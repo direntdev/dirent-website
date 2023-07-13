@@ -1,6 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { kv } from "@vercel/kv";
 
+export const compare = (left: string, right: string) => {
+  const [leftMajor, leftMinor, leftPatch] = left.split(".").map(Number);
+  const [rightMajor, rightMinor, rightPatch] = right.split(".").map(Number);
+  if (leftMajor > rightMajor) {
+    return 1;
+  } else if (leftMajor < rightMajor) {
+    return -1;
+  } else if (leftMinor > rightMinor) {
+    return 1;
+  } else if (leftMinor < rightMinor) {
+    return -1;
+  } else if (leftPatch > rightPatch) {
+    return 1;
+  } else if (leftPatch < rightPatch) {
+    return -1;
+  } else {
+    return 0;
+  }
+};
+
 export type ReleaseNotesData = {
   releases: { version: string; note: string }[];
 };
@@ -39,7 +59,9 @@ export default async function handler(
       releases: [
         ...releaseNotes.releases.filter(r => r.version !== version),
         { version, note },
-      ],
+      ].sort((a, b) =>
+        compare(b.version.replace("v", ""), a.version.replace("v", ""))
+      ),
     };
 
     await setReleaseNotes(newReleaseNotes);

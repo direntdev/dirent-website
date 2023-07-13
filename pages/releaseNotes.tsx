@@ -3,6 +3,7 @@ import { BackgroundLight } from "../components/backgroundLight";
 import { Layout } from "../components/layout";
 import type { NextPage } from "next";
 import { ReleaseNotesData } from "./api/releaseNotes";
+import ReactMarkdown from "react-markdown";
 
 const ReleaseNotesPage: NextPage<ReleaseNotesData> = (
   props: ReleaseNotesData
@@ -17,16 +18,44 @@ const ReleaseNotesPage: NextPage<ReleaseNotesData> = (
         </div>
         <div className="space-y-8">
           <div className="section-container">
-            <h2 className="section-header">Roadmap</h2>
-            <p className="text-xl">This roadmap is subject to change.</p>
+            <h2 className="section-header">Release notes</h2>
           </div>
-          <ul role="list" className="-mb-8">
+          <ul role="list" className="-mb-8 flex flex-col gap-20">
             {props.releases?.map(release => (
-              <li key={release.version} className="relative pb-8">
-                <div className="relative flex items-start space-x-3">
-                  {release.version}
-                </div>
-                {release.note}
+              <li key={release.version}>
+                <p className="text-2xl font-bold">{release.version}</p>
+                <ReactMarkdown
+                  className="text-left"
+                  components={{
+                    ul({ className, children }) {
+                      return (
+                        <ul
+                          className={`${className} list-outside list-disc pl-4`}
+                        >
+                          {children}
+                        </ul>
+                      );
+                    },
+                    code({ className, children }) {
+                      return (
+                        <code
+                          className={`${className} bg-skin-inactive px-small rounded-sm`}
+                        >
+                          {children}
+                        </code>
+                      );
+                    },
+                    h2({ children }) {
+                      return (
+                        <h2 className="border-skin-inactive pt-big border-b pb-px text-lg font-bold">
+                          {children}
+                        </h2>
+                      );
+                    },
+                  }}
+                >
+                  {release.note}
+                </ReactMarkdown>
               </li>
             ))}
           </ul>
