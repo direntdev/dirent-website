@@ -15,6 +15,10 @@ export const routes = {
     href: "/roadmap",
     name: "Roadmap",
   },
+  releaseNotes: {
+    href: "/releaseNotes",
+    name: "Release Notes",
+  },
   docs: {
     href: "https://docs.dirent.dev/",
     name: "Docs",

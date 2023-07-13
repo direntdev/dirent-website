@@ -9,11 +9,12 @@ const navbarButtons = [
   routes.about,
   routes.plugins,
   routes.docs,
+  routes.releaseNotes,
 ];
 
 export const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-skin-dark fixed inset-x-0 z-10">
+    <Disclosure as="nav" className="fixed inset-x-0 z-10 bg-skin-dark">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
