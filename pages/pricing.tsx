@@ -11,6 +11,7 @@ const tiers = [
     price: "$0",
     priceDescription: "free forever",
     button: "Get from App Store",
+    buttonEnabled: true,
     features: [
       "Go to location",
       "Command palette",
@@ -29,6 +30,7 @@ const tiers = [
     price: "$25",
     priceDescription: "one-time payment",
     button: "Coming soon",
+    buttonEnabled: false,
     features: [
       "Everything for Free",
       "iCloud integration",
@@ -74,7 +76,7 @@ const PricingPage: NextPage = () => {
                   <div className="bg-blue-200_ mt-2 flex items-center gap-x-4">
                     <span className="text-5xl font-bold tracking-tight">
                       {tier.price}
-                    </span>{" "}
+                    </span>
                     <span className="text-base font-semibold leading-7 text-gray-200">
                       {tier.priceDescription}
                     </span>
@@ -94,7 +96,7 @@ const PricingPage: NextPage = () => {
                 <a
                   href={tier.href}
                   aria-describedby={tier.id}
-                  className="mt-8 block rounded-md bg-skin-accent px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className={`mt-8 flex h-12 w-full justify-center rounded-md bg-skin-accent/80 py-3 px-4 text-center font-medium text-white shadow hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900`}
                 >
                   {tier.button}
                 </a>
