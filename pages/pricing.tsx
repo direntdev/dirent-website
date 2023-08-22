@@ -13,14 +13,14 @@ const tiers = [
     button: "Get from App Store",
     buttonEnabled: true,
     features: [
-      "Go to location",
+      "Go to the location",
       "Command palette",
-      "Copy, move, rename and delete files and folders",
+      "Copy, move, rename, and delete files and folders",
       "Duplicate nodes",
       "Create new files and folders",
-      "Open files with default/selected application",
-      "custom keybindings",
-      "customize toolbar",
+      "Open files with the default/selected application",
+      "Custom keybindings",
+      "Customize the toolbar",
     ],
   },
   {
@@ -96,7 +96,11 @@ const PricingPage: NextPage = () => {
                 <a
                   href={tier.href}
                   aria-describedby={tier.id}
-                  className={`mt-8 flex h-12 w-full justify-center rounded-md bg-skin-accent/80 py-3 px-4 text-center font-medium text-white shadow hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900`}
+                  className={`mt-8 flex h-12 w-full justify-center rounded-md py-3 px-4 text-center font-medium text-white shadow  ${
+                    !tier.buttonEnabled
+                      ? "cursor-default bg-gray-800"
+                      : "bg-skin-accent/80 hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
+                  }`}
                 >
                   {tier.button}
                 </a>
@@ -105,6 +109,7 @@ const PricingPage: NextPage = () => {
           </div>
         </div>
       </div>
+      http://localhost:3000/pricing#
     </Layout>
   );
 };
