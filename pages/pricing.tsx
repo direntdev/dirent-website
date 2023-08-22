@@ -98,7 +98,7 @@ const PricingPage: NextPage = () => {
                   aria-describedby={tier.id}
                   className={`mt-8 flex h-12 w-full justify-center rounded-md py-3 px-4 text-center font-medium text-white shadow  ${
                     !tier.buttonEnabled
-                      ? "cursor-default bg-gray-800"
+                      ? "cursor-default bg-gray-500"
                       : "bg-skin-accent/80 hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
                   }`}
                 >

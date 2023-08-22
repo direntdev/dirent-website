@@ -8,9 +8,9 @@ const navbarButtons = [
   routes.roadmap,
   routes.plugins,
   routes.pricing,
-  routes.docs,
   routes.releaseNotes,
   routes.about,
+  routes.docs,
 ];
 
 export const Navbar = () => {
