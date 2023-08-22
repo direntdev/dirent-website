@@ -70,7 +70,7 @@ const PricingPage: NextPage = () => {
                 className="flex flex-col justify-between rounded-2xl bg-skin-dark p-8 shadow-xl ring-1 ring-skin-accent/50 sm:p-10"
               >
                 <div>
-                  <span className="text-left text-3xl font-bold tracking-tight">
+                  <span className="text-left text-3xl font-bold tracking-tight text-skin-accent">
                     {tier.name}
                   </span>
                   <div className="bg-blue-200_ mt-2 flex items-center gap-x-4">
