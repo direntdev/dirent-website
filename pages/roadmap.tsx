@@ -1,6 +1,6 @@
-import { BackgroundLight } from '../components/backgroundLight';
-import { Layout } from '../components/layout';
-import { RoadmapIcon } from '../components/roadmapIcon';
+import { BackgroundLight } from "../components/backgroundLight";
+import { Layout } from "../components/layout";
+import { RoadmapIcon } from "../components/roadmapIcon";
 import type { NextPage } from "next";
 
 const timeline: {
@@ -52,15 +52,15 @@ const timeline: {
     type: "done",
   },
   {
-    content: "MVP Release for Windows and MacOS",
+    content: "Beta release for MacOS",
     href: "#",
-    date: "Q3 2022",
+    date: "Q1 2023",
     type: "milestone",
   },
   {
     content: "Quick launch popup",
     href: "#",
-    date: "Q3 2022",
+    date: "Q1 2023",
     type: "planned",
   },
   {
