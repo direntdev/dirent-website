@@ -7,6 +7,7 @@ const tiers = [
   {
     id: "tier-free",
     href: "https://github.com/direntdev/dirent/releases/download/v0.5.3/Dirent-0.5.3-arm64.dmg",
+    buttonText: "Download beta (Apple silicon)",
     name: "Free",
     price: "$0",
     priceDescription: "free forever",
@@ -46,6 +47,7 @@ const tiers = [
   {
     id: "tier-pro",
     href: "#",
+    buttonText: "Coming soon",
     name: "Pro",
     price: "$25",
     priceDescription: "one-time payment",
@@ -143,7 +145,7 @@ const PricingPage: NextPage = () => {
                       : "bg-skin-accent/80 hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
                   }`}
                 >
-                  <span>Download beta (Apple silicon)</span>
+                  <span>{tier.buttonText}</span>
                 </a>
               </div>
             ))}
