@@ -54,7 +54,7 @@ const tiers = [
     button: "Coming soon",
     buttonEnabled: false,
     features: [
-      ["Everything for Free", "Retain the functionality of the Free version."],
+      ["Everything in Free", "Retain the functionality of the Free version."],
       [
         "Custom Commands",
         "Craft your own commands for seamless app integration or tailored tasks.",
@@ -94,11 +94,12 @@ const PricingPage: NextPage = () => {
           <BackgroundLight className="left-[50px] top-[500px] h-[200px] w-[150px] bg-skin-accent/30"></BackgroundLight>
         </div>
         <div className="space-y-8">
-          <div className="section-container">
+          <div className="section-container flex flex-col items-center justify-center">
             <h2 className="section-header">Pricing</h2>
-            <p className="text-xl">
-              The free version is fully functional and Ad-Free. If you enjoy it
-              and want more features, upgrade to the Pro version.
+            <p className="max-w-md text-xl lg:max-w-4xl">
+              The free version is fully functional and Ad-Free. For enhanced
+              features, seamless productivity, and an extended toolkit, upgrade
+              to Pro.
             </p>
           </div>
           <div className="mx-auto -mb-8 grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
