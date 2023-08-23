@@ -153,7 +153,6 @@ const PricingPage: NextPage = () => {
           </div>
         </div>
       </div>
-      http://localhost:3000/pricing#
     </Layout>
   );
 };
