@@ -6,21 +6,41 @@ import { CheckIcon } from "@heroicons/react/solid";
 const tiers = [
   {
     id: "tier-free",
-    href: "#",
+    href: "https://github.com/direntdev/dirent/releases/download/v0.5.3/Dirent-0.5.3-arm64.dmg",
     name: "Free",
     price: "$0",
     priceDescription: "free forever",
     button: "Get from App Store",
     buttonEnabled: true,
     features: [
-      "Go to the location",
-      "Command palette",
-      "Copy, move, rename, and delete files and folders",
-      "Duplicate nodes",
-      "Create new files and folders",
-      "Open files with the default/selected application",
-      "Custom keybindings",
-      "Customize the toolbar",
+      [
+        "File Management",
+        "Copy, move, rename, duplicate, delete files/folders with precision. Quickly create new files and folders.",
+      ],
+      [
+        "Quick Navigation",
+        "Jump to open, recent, and favorite locations effortlessly.",
+      ],
+      [
+        "Command Palette",
+        "Execute functions seamlessly from a central control point.",
+      ],
+      [
+        "Customization",
+        "Choose between Light and Dark themes, personalize keybindings and toolbar.",
+      ],
+      [
+        "Search and Filters",
+        "Quickly select and filter files. Perform advanced searches using regex and more.",
+      ],
+      [
+        "Seamless Previews",
+        "Preview documents, images, videos, music, and PDFs with ease.",
+      ],
+      [
+        "System Integration",
+        "Open files/folders seamlessly in Finder, Terminal, and other system apps. Compress and extract archives.",
+      ],
     ],
   },
   {
@@ -32,16 +52,32 @@ const tiers = [
     button: "Coming soon",
     buttonEnabled: false,
     features: [
-      "Everything for Free",
-      "iCloud integration",
-      "Undo-redo with history for file operations",
-      "10 beautifully tailored themes and theme editor",
-      "Enhanced path navigator",
-      "Custom commands",
-      "Grid view",
-      "Batch rename files",
-      "Plugins",
-      "Archive inspection and editing",
+      ["Everything for Free", "Retain the functionality of the Free version."],
+      [
+        "Custom Commands",
+        "Craft your own commands for seamless app integration or tailored tasks.",
+      ],
+      [
+        "iCloud Integration",
+        "Access and manage your files across devices with iCloud integration.",
+      ],
+      [
+        "Undo-Redo with History",
+        "Navigate through your file operations with the power of undo-redo.",
+      ],
+      [
+        "More Themes and Theme Editor",
+        "Personalize with more themes and a theme editor.",
+      ],
+      ["Plugin Support", "Expand functionality through integrated plugins."],
+      [
+        "Smart Batch Rename Files",
+        "Utilize intelligent renaming for multiple files in one go.",
+      ],
+      [
+        "Archive Inspection and Editing",
+        "Inspect and edit archives just like regular directories.",
+      ],
     ],
   },
 ];
@@ -49,7 +85,7 @@ const tiers = [
 const PricingPage: NextPage = () => {
   return (
     <Layout>
-      <div className="relative mx-auto max-w-3xl py-12 px-6 text-center">
+      <div className="relative mx-auto max-w-5xl py-12 px-6 text-center">
         <div className="pointer-events-none absolute inset-0">
           <BackgroundLight className="left-0 top-[200px] h-[400px] w-[500px] -rotate-45 bg-skin-accent/20"></BackgroundLight>
           <BackgroundLight className="left-1/3 top-[350px] h-[200px] w-[500px] -rotate-[20deg] bg-skin-accent/20"></BackgroundLight>
@@ -70,7 +106,7 @@ const PricingPage: NextPage = () => {
                 className="flex flex-col justify-between rounded-2xl bg-skin-dark p-8 shadow-xl ring-1 ring-skin-accent/50 sm:p-10"
               >
                 <div>
-                  <span className="text-left text-3xl font-bold tracking-tight text-skin-accent">
+                  <span className="text-left text-4xl font-bold tracking-tight text-skin-accent">
                     {tier.name}
                   </span>
                   <div className="bg-blue-200_ mt-2 flex items-center gap-x-4">
@@ -82,13 +118,18 @@ const PricingPage: NextPage = () => {
                     </span>
                   </div>
                   <ul role="list" className="mt-10 space-y-4 text-sm leading-6">
-                    {tier.features.map(feature => (
-                      <li key={feature} className="flex gap-x-3">
+                    {tier.features.map(([name, description]) => (
+                      <li key={name} className="flex gap-x-3">
                         <CheckIcon
                           className="h-6 w-5 flex-none text-skin-accent"
                           aria-hidden="true"
                         />
-                        <span className="text-left">{feature}</span>
+                        <div>
+                          <div className="text-left font-bold">{name}</div>
+                          <div className="text-left text-sm text-gray-300">
+                            {description}
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -102,7 +143,7 @@ const PricingPage: NextPage = () => {
                       : "bg-skin-accent/80 hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
                   }`}
                 >
-                  {tier.button}
+                  <span>Download beta (Apple silicon)</span>
                 </a>
               </div>
             ))}

@@ -6,7 +6,6 @@ import { routes } from "../utils/routes";
 
 const navbarButtons = [
   routes.roadmap,
-  routes.plugins,
   routes.pricing,
   routes.releaseNotes,
   routes.about,
