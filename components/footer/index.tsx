@@ -2,7 +2,7 @@ import { FooterColumn } from "./footerColumn";
 import { routes } from "../../utils/routes";
 
 const navigation = {
-  product: [routes.roadmap, routes.plugins, routes.docs],
+  product: [routes.roadmap, routes.releaseNotes, routes.pricing, routes.docs],
   company: [routes.about, routes.contact, routes.blog],
   legal: [routes.privacy, routes.terms],
   social: [
@@ -48,7 +48,7 @@ export const Footer = () => {
             ))}
           </div>
           <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-            &copy; 2022 Dirent. All rights reserved.
+            &copy; 2023 Dirent. All rights reserved.
           </p>
         </div>
       </div>
