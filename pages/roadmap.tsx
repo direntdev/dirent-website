@@ -10,7 +10,7 @@ const timeline: {
   type: "done" | "milestone" | "planned" | "maybe";
 }[] = [
   {
-    content: "Core running on Windows and MacOS",
+    content: "Alpha running on Windows and MacOS",
     href: "",
     date: "Q3 2021",
     type: "done",
@@ -18,37 +18,43 @@ const timeline: {
   {
     content: "Custom keyboard shortcuts",
     href: "",
-    date: "Q3 2021",
+    date: "Q1 2022",
     type: "done",
   },
   {
     content: "Command palette",
     href: "",
-    date: "Q3 2021",
+    date: "Q1 2022",
     type: "done",
   },
   {
     content: "Preserve app state",
     href: "",
-    date: "Q4 2021",
+    date: "Q2 2022",
     type: "done",
   },
   {
-    content: "Custom toolbar icons",
+    content: "Custom toolbar",
     href: "",
-    date: "Q4 2021",
+    date: "Q2 2022",
     type: "done",
   },
   {
-    content: "Custom user commands to open external apps",
+    content: "Quick Navigation",
     href: "",
-    date: "Q4 2021",
+    date: "Q2 2022",
+    type: "done",
+  },
+  {
+    content: "Custom Commands",
+    href: "",
+    date: "Q3 2022",
     type: "done",
   },
   {
     content: "Dark and light themes",
     href: "",
-    date: "Q1 2022",
+    date: "Q3 2022",
     type: "done",
   },
   {
@@ -58,9 +64,39 @@ const timeline: {
     type: "milestone",
   },
   {
-    content: "Quick launch popup",
+    content: "Managing archives",
     href: "#",
-    date: "Q1 2023",
+    date: "Q2 2023",
+    type: "done",
+  },
+  {
+    content: "Preview documents, images, videos, music, and PDFs",
+    href: "",
+    date: "Q2 2023",
+    type: "done",
+  },
+  {
+    content: "Advanced search popup with regex expressions",
+    href: "",
+    date: "Q2 2023",
+    type: "done",
+  },
+  {
+    content: "Drag and drop files from and into the app",
+    href: "#",
+    date: "Q3 2023",
+    type: "done",
+  },
+  {
+    content: "MVP release for MacOS",
+    href: "#",
+    date: "Q4 2023",
+    type: "planned",
+  },
+  {
+    content: "MVP release for Windows",
+    href: "#",
+    date: "Q1 2024",
     type: "planned",
   },
   {
@@ -70,53 +106,22 @@ const timeline: {
     type: "planned",
   },
   {
-    content: "Welcome page with quick tutorial",
+    content: "Undo-Redo with History",
     href: "#",
     date: "Planned",
     type: "planned",
   },
   {
-    content: "Advanced search popup with regex expressions",
-    href: "#",
-    date: "Planned",
-    type: "planned",
-  },
-
-  {
-    content: "Plugins",
+    content: "Plugin Support",
     href: "#",
     date: "Planned",
     type: "planned",
   },
   {
-    content: "Managing archives",
+    content: "iCloud Integration",
     href: "#",
     date: "Planned",
     type: "planned",
-  },
-  {
-    content: "Advanced path selector",
-    href: "#",
-    date: "Unknown",
-    type: "maybe",
-  },
-  {
-    content: "Command line parameters",
-    href: "#",
-    date: "Unknown",
-    type: "maybe",
-  },
-  {
-    content: "Drag and drop files from and into the app",
-    href: "#",
-    date: "Unknown",
-    type: "maybe",
-  },
-  {
-    content: "Export current list of files to csv",
-    href: "#",
-    date: "Unknown",
-    type: "maybe",
   },
 ];
 
