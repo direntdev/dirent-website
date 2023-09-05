@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { BackgroundLight } from '../components/backgroundLight';
-import { Layout } from '../components/layout';
-import { MainSection } from '../components/mainSection';
-import { routes } from '../utils/routes';
-import { SectionWithImage } from '../components/sectionWithImage';
+import Image from "next/image";
+import Link from "next/link";
+import { BackgroundLight } from "../components/backgroundLight";
+import { Layout } from "../components/layout";
+import { MainSection } from "../components/mainSection";
+import { routes } from "../utils/routes";
+import { SectionWithImage } from "../components/sectionWithImage";
 import type { NextPage } from "next";
 
 const middleSections: {
@@ -15,25 +15,25 @@ const middleSections: {
 }[] = [
   {
     header: `Cross platform`,
-    description: `Dirent runs on MacOS and Windows, and will be on Linux soon. Looks similar across platforms but takes advantage of system APIs when needed.`,
+    description: `Dirent is already operational on MacOS and is coming soon to Windows. It offers a consistent user experience across different operating systems while seamlessly leveraging native system APIs.`,
     href: "https://docs.dirent.dev/guides/platform-support",
     imageSrc: "/app-all.png",
   },
   {
-    header: `Command palette`,
-    description: `Powerful command palette you know and love. Everything you can do in Direct is accessible from the command palette so you don't have to remember all the shortcuts.`,
+    header: `Command Palette`,
+    description: `Experience the robust command palette you've come to appreciate. Every function within Dirent is easily accessible via the command palette, eliminating the need to memorize shortcuts.`,
     href: "https://docs.dirent.dev/guides/command-palette",
     imageSrc: "/command-palette.png",
   },
   {
-    header: `Fast and secure`,
-    description: `Beautiful and responsive Web UI combined with native code performance for file operations. Dirent is completely offline and no data is ever sent to the server.`,
+    header: `Fast and Secure`,
+    description: `Enjoy a visually appealing, responsive Web UI that works in tandem with high-performance native code for file management. Rest assured, Dirent operates entirely offline; your data never leaves your device.`,
     href: "https://docs.dirent.dev/guides/architecture",
     imageSrc: "/secure.png",
   },
   {
-    header: `Extensible and customizable`,
-    description: `Modify or create your own themes, icons, and shortcuts. Define custom commands to interact with the system and other apps. Plugins system coming soon.`,
+    header: `Configurable and Extensible`,
+    description: `Personalize Dirent by designing your own themes, and keyboard shortcuts. Implement custom commands for unique system interactions and app integration. Stay tuned for our upcoming plugins system.`,
     href: "https://docs.dirent.dev/customization/custom-commands",
     imageSrc: "/extensible.png",
   },
