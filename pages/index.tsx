@@ -33,7 +33,7 @@ const middleSections: {
   },
   {
     header: `Configurable and Extensible`,
-    description: `Personalize Dirent by designing your own themes, and keyboard shortcuts. Implement custom commands for unique system interactions and app integration. Stay tuned for our upcoming plugins system.`,
+    description: `Personalize Dirent by designing your own themes and keyboard shortcuts. Implement custom commands for unique system interactions and app integration. Stay tuned for our upcoming plugin system.`,
     href: "https://docs.dirent.dev/customization/custom-commands",
     imageSrc: "/extensible.png",
   },
