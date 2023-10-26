@@ -6,8 +6,8 @@ import { CheckIcon } from "@heroicons/react/solid";
 const tiers = [
   {
     id: "tier-free",
-    href: "https://github.com/direntdev/dirent/releases/download/v0.5.5/Dirent-0.5.5-arm64.dmg",
-    buttonText: "Download beta (Apple silicon)",
+    href: "https://github.com/direntdev/dirent/releases",
+    buttonText: "Download beta",
     name: "Free",
     price: "$0",
     priceDescription: "free forever",
