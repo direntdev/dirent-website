@@ -1,4 +1,5 @@
 import { CompositeLogo } from "./compositeLogo";
+import { OverlayScroll } from "./OverlayScroll";
 
 export const MainSection = () => {
   return (
@@ -6,6 +7,40 @@ export const MainSection = () => {
       <div className="mx-auto w-full max-w-[400px] lg:col-start-2">
         <CompositeLogo></CompositeLogo>
       </div>
+      <div className="h-[500px] w-96 bg-red-200">
+        <OverlayScroll
+          size={15}
+          renderThumb={(ref, style, isDraggingThumb) => (
+            <div
+              ref={ref as any}
+              className={`bg-blue-200 transition-colors duration-150 ease-in-out  ${
+                isDraggingThumb ? "bg-blue-900" : "hover:bg-blue-500"
+              }`}
+              style={{ ...style, borderRadius: 10 }}
+            ></div>
+          )}
+          renderTrack={(ref, style) => (
+            <div
+              ref={ref as any}
+              style={{ ...style, backgroundColor: "rgba(255, 0, 0, 0.5)" }}
+            ></div>
+          )}
+        >
+          <div className="">
+            {Array.from({ length: 150 }, (_, i) => (
+              <div
+                key={i}
+                className="_border flex h-[20px] flex-row justify-between bg-blue-500"
+              >
+                <div>
+                  Dupfsefsefsefes fesf esfj eslkfjse lkfjsel kfejs lkfja
+                </div>
+              </div>
+            ))}
+          </div>
+        </OverlayScroll>
+      </div>
+
       <div className="">
         <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
           <span className="block">File management</span>
