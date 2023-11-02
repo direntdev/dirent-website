@@ -73,6 +73,7 @@ export const OverlayScroll = (props: OverlayScrollProps) => {
     const { thumbHeight, thumbTop } = scrollStateRef.current;
 
     const handleTrackPointerDown = (e: PointerEvent) => {
+      e.preventDefault();
       const rect = contentElement.getBoundingClientRect();
       const clickPosition = e.clientY - rect.top - thumbHeight / 2; //clamp
       const clickPercentage = clickPosition / contentElement.clientHeight;
