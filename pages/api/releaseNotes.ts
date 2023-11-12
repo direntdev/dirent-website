@@ -65,6 +65,7 @@ export default async function handler(
     };
 
     await setReleaseNotes(newReleaseNotes);
+    await res.unstable_revalidate("/releaseNotes");
 
     return res.status(200).send({
       message: JSON.stringify(newReleaseNotes),

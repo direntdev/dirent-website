@@ -1,7 +1,6 @@
-import { GetServerSideProps } from "next";
 import { BackgroundLight } from "../components/backgroundLight";
 import { Layout } from "../components/layout";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import { ReleaseNotesData } from "./api/releaseNotes";
 import ReactMarkdown from "react-markdown";
 
@@ -67,9 +66,7 @@ const ReleaseNotesPage: NextPage<ReleaseNotesData> = (
 
 export default ReleaseNotesPage;
 
-export const getServerSideProps: GetServerSideProps<
-  ReleaseNotesData
-> = async () => {
+export const getStaticProps: GetStaticProps<ReleaseNotesData> = async () => {
   const res = await fetch("https://dirent.dev/api/releaseNotes");
   const data = await res.json();
   const { releases } = JSON.parse(data.message);
