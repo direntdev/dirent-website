@@ -24,7 +24,7 @@ const PrivacyPage: NextPage = () => {
             The only thing that we store is the app state in a local file to be
             able to restore it to where you left off after you restart the app.
             This includes the currently open folder paths and selected file
-            names, the history of visited folders (for the 'Navigate to Recent'
+            names, the history of visited folders (for the Navigate to Recent
             feature), and the user settings. This data is stored on your device
             and is not shared.
           </p>
