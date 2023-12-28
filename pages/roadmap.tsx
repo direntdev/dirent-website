@@ -94,7 +94,7 @@ const timeline: {
     type: "planned",
   },
   {
-    content: "MVP release for Windows",
+    content: "Beta release for Windows",
     href: "#",
     date: "Q1 2024",
     type: "planned",

@@ -10,7 +10,7 @@ const tiers = [
     buttonText: "Download beta",
     name: "Free",
     price: "$0",
-    priceDescription: "free forever",
+    priceDescription: "Free forever",
     button: "Get from App Store",
     buttonEnabled: true,
     features: [
@@ -48,9 +48,9 @@ const tiers = [
     id: "tier-pro",
     href: "#",
     buttonText: "Coming soon",
-    name: "Pro",
+    name: "Pro Pack",
     price: "$25",
-    priceDescription: "one-time payment",
+    priceDescription: "In-app purchase",
     button: "Coming soon",
     buttonEnabled: false,
     features: [
