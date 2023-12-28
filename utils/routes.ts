@@ -39,10 +39,6 @@ export const routes = {
     href: "/privacy",
     name: "Privacy",
   },
-  terms: {
-    href: "/terms",
-    name: "Terms",
-  },
   blog: {
     href: "https://dev.to/dirent",
     name: "Blog",

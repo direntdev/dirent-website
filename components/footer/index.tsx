@@ -4,7 +4,7 @@ import { routes } from "../../utils/routes";
 const navigation = {
   product: [routes.roadmap, routes.releaseNotes, routes.pricing, routes.docs],
   company: [routes.about, routes.contact, routes.blog],
-  legal: [routes.privacy, routes.terms],
+  legal: [routes.privacy],
   social: [
     {
       name: "GitHub",
