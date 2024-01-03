@@ -6,13 +6,17 @@ import { CheckIcon } from "@heroicons/react/solid";
 const tiers = [
   {
     id: "tier-free",
-    href: "https://github.com/direntdev/dirent/releases",
-    buttonText: "Download beta",
+    href: "https://apps.apple.com/us/app/dirent/id1662008844",
     name: "Free",
     price: "$0",
     priceDescription: "Free forever",
-    button: "Get from App Store",
-    buttonEnabled: true,
+    button: () => (
+      <div className="mt-10 flex items-center justify-center">
+        <a href="https://apps.apple.com/us/app/dirent/id1662008844">
+          <img src="./mac-app-store.svg"></img>
+        </a>
+      </div>
+    ),
     features: [
       [
         "File Management",
@@ -47,12 +51,10 @@ const tiers = [
   {
     id: "tier-pro",
     href: "#",
-    buttonText: "Coming soon",
     name: "Pro Pack",
     price: "$25",
     priceDescription: "In-app purchase",
-    button: "Coming soon",
-    buttonEnabled: false,
+    button: () => null,
     features: [
       ["Everything in Free", "Retain the functionality of the Free version."],
       [
@@ -137,17 +139,7 @@ const PricingPage: NextPage = () => {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href={tier.href}
-                  aria-describedby={tier.id}
-                  className={`mt-8 flex h-12 w-full justify-center rounded-md py-3 px-4 text-center font-medium text-white shadow  ${
-                    !tier.buttonEnabled
-                      ? "cursor-default bg-gray-500"
-                      : "bg-skin-accent/80 hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900"
-                  }`}
-                >
-                  <span>{tier.buttonText}</span>
-                </a>
+                {tier.button()}
               </div>
             ))}
           </div>

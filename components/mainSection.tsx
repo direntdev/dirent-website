@@ -19,12 +19,8 @@ export const MainSection = () => {
           files with confidence and ease.
         </p>
         <div className="mt-10 flex items-center justify-center sm:mt-16 lg:block">
-          <a
-            href="https://github.com/direntdev/dirent/releases"
-            type="submit"
-            className="flex h-12 w-fit rounded-md bg-skin-accent/80 py-3 px-4 font-medium text-white shadow hover:bg-skin-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 "
-          >
-            <span>Download beta</span>
+          <a href="https://apps.apple.com/us/app/dirent/id1662008844">
+            <img src="./mac-app-store.svg"></img>
           </a>
         </div>
       </div>
