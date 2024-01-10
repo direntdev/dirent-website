@@ -19,9 +19,14 @@ export const MainSection = () => {
           files with confidence and ease.
         </p>
         <div className="mt-10 flex items-center justify-center sm:mt-16 lg:block">
-          <a href="https://apps.apple.com/us/app/dirent/id1662008844">
-            <img src="./mac-app-store.svg"></img>
-          </a>
+          <div className="w-fit">
+            <a
+              href="https://apps.apple.com/us/app/dirent/id1662008844"
+              className=""
+            >
+              <img src="./mac-app-store.svg"></img>
+            </a>
+          </div>
         </div>
       </div>
     </div>
