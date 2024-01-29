@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Lightbox from 'react-image-lightbox';
-import { useState } from 'react';
-import 'react-image-lightbox/style.css';
+import Image from "next/image";
+import Lightbox from "react-image-lightbox";
+import { useState } from "react";
+import "react-image-lightbox/style.css";
 
 export const LightboxImage = (props: { src: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,13 @@ export const LightboxImage = (props: { src: string }) => {
           }}
         />
       )}
-      <Image alt="" width={800} height={600} src={props.src}></Image>
+      <Image
+        className="super-shadow"
+        alt=""
+        width={2680 / 4}
+        height={1720 / 4}
+        src={props.src}
+      ></Image>
     </div>
   );
 };

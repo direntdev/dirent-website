@@ -58,15 +58,9 @@ const timeline: {
     type: "done",
   },
   {
-    content: "Beta release for MacOS",
-    href: "#",
-    date: "Q1 2023",
-    type: "milestone",
-  },
-  {
     content: "Managing archives",
     href: "#",
-    date: "Q2 2023",
+    date: "Q1 2023",
     type: "done",
   },
   {
@@ -76,22 +70,29 @@ const timeline: {
     type: "done",
   },
   {
+    content: "Beta release for MacOS",
+    href: "#",
+    date: "Q4 2023",
+    type: "milestone",
+  },
+
+  {
     content: "Advanced search popup with regex expressions",
     href: "",
-    date: "Q2 2023",
+    date: "Q4 2023",
     type: "done",
   },
   {
     content: "Drag and drop files from and into the app",
     href: "#",
-    date: "Q3 2023",
+    date: "Q4 2023",
     type: "done",
   },
   {
-    content: "MVP release for MacOS",
+    content: "Release for MacOS",
     href: "#",
-    date: "Q4 2023",
-    type: "planned",
+    date: "Q1 2024",
+    type: "milestone",
   },
   {
     content: "Beta release for Windows",

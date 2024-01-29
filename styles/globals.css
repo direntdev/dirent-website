@@ -52,3 +52,7 @@
 body {
   background: rgb(var(--color-background-dark));
 }
+
+.super-shadow {
+  filter: drop-shadow(0 0 0.25rem black);
+}
