@@ -1,17 +1,22 @@
-import Link from 'next/link';
-import { LightboxImage } from './lightboxImage';
-import 'react-image-lightbox/style.css';
+import Link from "next/link";
+import "react-image-lightbox/style.css";
 
-export const SectionWithImage = (props: {
+export const SectionWithContent = (props: {
   header: string;
   description: string;
-  imageSrc: string;
-  imagePosition: "left" | "right";
+  contentPosition: "left" | "right";
+  renderContent: () => JSX.Element;
   className?: string;
   href?: string;
 }) => {
-  const { header, description, imageSrc, imagePosition, className, href } =
-    props;
+  const {
+    header,
+    description,
+    renderContent,
+    contentPosition,
+    className,
+    href,
+  } = props;
   return (
     <div
       className={`relative items-center text-center md:grid md:grid-flow-row-dense md:grid-cols-2 md:gap-8 ${
@@ -20,7 +25,7 @@ export const SectionWithImage = (props: {
     >
       <div
         className={`relative space-y-3 ${
-          imagePosition === "left" ? "md:col-start-1" : "md:col-start-2"
+          contentPosition === "left" ? "md:col-start-1" : "md:col-start-2"
         }`}
       >
         <h3 className="section-header">{header}</h3>
@@ -32,7 +37,7 @@ export const SectionWithImage = (props: {
         )}
       </div>
       <div className="mx-auto md:order-last" aria-hidden="true">
-        <LightboxImage src={imageSrc} />
+        {renderContent()}
       </div>
     </div>
   );

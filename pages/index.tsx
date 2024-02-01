@@ -1,41 +1,42 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BackgroundLight } from "../components/backgroundLight";
 import { Layout } from "../components/layout";
 import { MainSection } from "../components/mainSection";
 import { routes } from "../utils/routes";
-import { SectionWithImage } from "../components/sectionWithImage";
+import { SectionWithContent } from "../components/sectionWithContent";
 import type { NextPage } from "next";
+import { LightboxImage } from "../components/lightboxImage";
+import { IntroVideo } from "./IntroVideo";
 
 const middleSections: {
   header: string;
   description: string;
-  imageSrc: string;
+  renderContent: () => JSX.Element;
   href?: string;
 }[] = [
   {
     header: `Cross platform`,
     description: `Dirent is already operational on MacOS and is coming soon to Windows. It offers a consistent user experience across different operating systems while seamlessly leveraging native system APIs.`,
     href: "https://docs.dirent.dev/guides/platform-support",
-    imageSrc: "/app-all.png",
+    renderContent: () => <LightboxImage src={"/app-all.png"} />,
   },
   {
     header: `Command Palette`,
     description: `Experience the robust command palette you've come to appreciate. Every function within Dirent is easily accessible via the command palette, eliminating the need to memorize shortcuts.`,
     href: "https://docs.dirent.dev/guides/command-palette",
-    imageSrc: "/command-palette.png",
+    renderContent: () => <LightboxImage src={"/command-palette.png"} />,
   },
   {
     header: `Fast and Secure`,
     description: `Enjoy a visually appealing, responsive Web UI that works in tandem with high-performance native code for file management. Rest assured, Dirent operates entirely offline; your data never leaves your device.`,
     href: "https://docs.dirent.dev/guides/architecture",
-    imageSrc: "/secure.png",
+    renderContent: () => <LightboxImage src={"/secure.png"} />,
   },
   {
     header: `Configurable and Extensible`,
     description: `Personalize Dirent by designing your own themes and keyboard shortcuts. Implement custom commands for unique system interactions and app integration. Stay tuned for our upcoming plugin system.`,
     href: "https://docs.dirent.dev/customization/custom-commands",
-    imageSrc: "/extensible.png",
+    renderContent: () => <LightboxImage src={"/extensible.png"} />,
   },
 ];
 
@@ -59,21 +60,26 @@ const Home: NextPage = () => {
                 index % 2 === 0 ? "bg-skin-light/50" : "bg-skin-medium"
               }`}
             >
-              <SectionWithImage
+              <SectionWithContent
                 className={"mx-auto max-w-5xl px-6 py-12"}
-                imagePosition={index % 2 === 0 ? "right" : "left"}
+                contentPosition={index % 2 === 0 ? "right" : "left"}
                 {...section}
-              ></SectionWithImage>
+              ></SectionWithContent>
             </div>
           ))}
         </div>
-        <div
-          className={`relative items-center space-y-3 px-6 py-12 text-center`}
-        >
-          <p className="text-lg">{"Want more? Check our roadmap!"}</p>
-          <Link href={routes.roadmap.href}>
-            <a className="text-blue-500">Learn more</a>
-          </Link>
+        <div className="bg-skin-light/50">
+          <div className="mx-auto px-9 py-12">
+            <IntroVideo></IntroVideo>
+          </div>
+          <div
+            className={`relative items-center space-y-3 px-6 pb-12 text-center`}
+          >
+            <p className="text-lg">{"Want more? Check our roadmap!"}</p>
+            <Link href={routes.roadmap.href}>
+              <a className="text-blue-500">Learn more</a>
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>

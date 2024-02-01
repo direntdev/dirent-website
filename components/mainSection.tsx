@@ -24,7 +24,7 @@ export const MainSection = () => {
               href="https://apps.apple.com/us/app/dirent/id1662008844"
               className=""
             >
-              <img src="./mac-app-store.svg"></img>
+              <img width={200} src="./mac-app-store.svg"></img>
             </a>
           </div>
         </div>
