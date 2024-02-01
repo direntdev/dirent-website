@@ -6,7 +6,7 @@ import { routes } from "../utils/routes";
 import { SectionWithContent } from "../components/sectionWithContent";
 import type { NextPage } from "next";
 import { LightboxImage } from "../components/lightboxImage";
-import { IntroVideo } from "./IntroVideo";
+import { IntroVideo } from "../components/IntroVideo";
 
 const middleSections: {
   header: string;
