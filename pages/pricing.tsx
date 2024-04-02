@@ -12,7 +12,7 @@ const tiers = [
     priceDescription: "Free forever",
     button: () => (
       <div className="mt-10 flex items-center justify-center">
-        <a href="https://apps.apple.com/us/app/dirent/id1662008844">
+        <a href="https://apps.apple.com/pl/app/dirent/id1662008844">
           <img src="./mac-app-store.svg"></img>
         </a>
       </div>

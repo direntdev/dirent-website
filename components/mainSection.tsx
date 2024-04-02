@@ -21,7 +21,7 @@ export const MainSection = () => {
         <div className="mt-10 flex items-center justify-center sm:mt-16 lg:block">
           <div className="w-fit">
             <a
-              href="https://apps.apple.com/us/app/dirent/id1662008844"
+              href="https://apps.apple.com/pl/app/dirent/id1662008844"
               className=""
             >
               <img width={200} src="./mac-app-store.svg"></img>
