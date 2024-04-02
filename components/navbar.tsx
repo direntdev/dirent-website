@@ -4,12 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { routes } from "../utils/routes";
 
-const navbarButtons = [
-  routes.roadmap,
-  routes.releaseNotes,
-  routes.pricing,
-  routes.docs,
-];
+const navbarButtons = [routes.roadmap, routes.pricing, routes.docs];
 
 export const Navbar = () => {
   return (

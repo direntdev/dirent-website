@@ -1,0 +1,248 @@
+v1.0.0
+
+Announcement
+Dirent has been released on Mac App Store. You can download it from here. Beta server will be closed soon.
+
+v0.9.2
+
+Features
+The share option has been added to file/folder context menus. Now you can use the system's share functionality.
+Bugs
+Fixed some issues with focusing the viewer after closing dialogs.
+v0.9.1
+
+Features
+Full Disk Access: Added a button on the Settings and Welcome pages to request Full Disk Access.
+Filter functionality is now inline next to the path input.
+Improved error handling for system-protected files.
+Visual improvements for the grid view.
+Preserved Welcome pages: Users can now close the app and reopen it without having to go through the welcome pages again.
+Bugs
+Fixed some translation issues.
+Fixed viewer focus issues.
+v0.9.0
+
+Features
+Grid View mode added. You can now switch between List and Grid view modes using a command or button.
+Quick Look added. You can now use MacOS build in Quick Look feature to preview files. This feature is only available on MacOS.
+Bugs
+Fixed the issue of dropping a node onto itself.
+Fixed keyboard navigation issues. It should now only navigate the List/Grid when it is focused.
+Resolved the problem of "File Preview" reloading twice due to the Windows file watcher.
+Improved icon image caching. It will now automatically remove old cached images. The cache size has been adjusted to store more smaller images and fewer larger images, resulting in improved memory usage.
+v0.8.6
+
+Features
+The Quick Preview can now be resized either manually or via the command 'Change Quick Preview Size'.
+Light theme adjustments.
+Bugs
+The app no longer opens an extra window when files are dropped into an input.
+v0.8.5
+
+Features
+MAS (Mac App Store) version preparations.
+Added symlink preview; it should show the symlink target path.
+The License Agreement (EULA) is now part of the welcome dialog.
+Redesigned the Tags Setting Tab.
+Increased the default window size.
+Offline release notes.
+v0.8.4
+
+New Features
+Updated "About" dialog.
+Added Intel-based version for Mac.
+v0.8.3
+
+Features
+It is now possible to paste items from the clipboard into the directory that the user right-clicked on.
+Adjusted translations for Windows to match the environment.
+Added a notification when the item path has been copied to the clipboard.
+Clearing the recent paths history in settings is now possible only if there is some history.
+Added the proper "Explorer" icon for Windows.
+Made improvements to the main menu for Windows.
+Bugs
+Fixed autoscrolling to the selected tab.
+v0.8.2
+
+Features:
+Added new keymaps for Windows: Code and Commander.
+Bugs:
+The app now properly calculates "Date Modified."
+Auto-update has been disabled on Windows because it was not functioning correctly.
+The error for empty virtualization lists has been fixed.
+v0.8.1
+
+Features
+Main menu on Windows has been adjusted
+Bugs
+Fixed settings default keymap for Windows
+v0.8.0
+
+Features
+"Go to Location": You can easily filter by type.
+Custom scrollbars: Both Windows and Mac will now use custom scrollbars. If you wish to go back to the native ones, you can change it in settings.
+Windows alpha release.
+v0.7.1
+
+Features
+A license agreement dialog improvements
+v0.7.0
+
+Features
+A license agreement has been added. The app will now prompt users to agree to the license terms the first time it is run.
+v0.6.0
+
+Features
+Symlink support: The app will now handle symlinks correctly, including their display and all file operations.
+Calculate Directory Size: The preview panel will now include an additional button to calculate the directory size upon request.
+Improved visuals for move/copy/duplicate operations: The app will now show the exact progress of these operations. It will first attempt to calculate the directory size and then provide detailed information about the progress, such as the number of bytes processed, the speed, and the estimated time remaining. This improvement applies to both dialogs and the tasks panel.
+Improved copy performance: When dealing with large files, the app will now stream the files instead of copying them. This change brings Dirent's performance on par with the system's copy function for large files.
+Bugs
+Fixed the issue of pressing "Backspace" in the path field.
+Fixed the issue with using "Open with" from the command palette.
+Fixed issues with scaling dialogs when the app is resized to a very small size.
+v0.5.5
+
+Features
+The Change Item Path command allows you to move an item up and down in the directory tree. It will also create any missing directories along the way.
+Windows
+Added archive/extract functionality.
+Added the Open in Powershell command.
+Bugs
+Fixed the issue of clicking on the follow-up palette.
+Fixed the problem of setting the keyboard layout on the welcome page.
+Fixed the image scaling in the preview window.
+Fixed some translation errors.
+v0.5.4
+
+Features
+"Node" has been renamed to "Item" in all instances.
+Reduced contrast of light theme
+A new context menu has been added to the items table.
+New predefined directories (documents, downloads, desktop) have been added to Favorites.
+Keymaps have been revisited and now include the options: "Finder," "Commander," and "Code."
+The volumes watcher has been optimized to check disk size less frequently.
+A new command, "Navigate to volume root," has been added.
+Additional options have been added to the main menu.
+The search function has been made more lightweight, allowing for interruption at any time, although it may take longer.
+Users will now be notified when items are copied to the clipboard.
+Items can be selected by using shift + click.
+Improvements have been made to translations.
+The user experience (UX) now includes more animations.
+v0.5.3
+
+Features:
+Added a new option "Duplicate" to duplicate nodes.
+Replaced the temporal debug system preview with a built-in "Preview."
+Extended the list of supported files for the built-in preview.
+Implemented basic preview functionality for directories.
+Overhauled the main menu with new options.
+Updated the node context menu with new options.
+Revised the tab context menu with new options.
+Removed the "About" command, which is now only accessible from the main menu.
+The command palette and main menu no longer display commands that cannot be executed, such as closing a tab when only one is left.
+It is now possible to duplicate a tab to the current panel and the other panel.
+Updated the default toolbar to include more commands.
+Increased visibility of items on the light theme.
+Bugs
+Key bindings no longer allow the use of system key bindings.
+It is no longer possible to close a locked tab.
+Resetting tags now works correctly when closing the dialog.
+v0.5.2
+
+Features:
+Light and Dark themes adjusted to match system colors.
+Transitions between directories should now be smoother.
+v0.5.1
+
+Features
+Keybinding settings overhaul.
+v0.5.0
+
+Features:
+(Beta) Tags - Tab colors changed to "Tags." You can now customize your tags in Settings -> Tags tab. All tab colors have been migrated to tags.
+System theme - New theme that will sync with system settings.
+Node list tooltip - Shows the name of the node. Useful if it's longer than the available space to see the whole name.
+Scrollbar colors - are now synchronized with the theme.
+Bugs
+Fixed resetting settings.
+Some icon adjustments.
+v0.4.5
+
+Bug Fixes
+Fixed scroll showing all the time
+v0.4.4
+
+New Features
+General settings overhaul.
+Toolbar settings overhaul.
+The command palette now includes icons for all commands.
+"Show in Finder" and "Show in Terminal" are now built-in commands rather than custom ones.
+Bug Fixes
+Fixed the issue with resetting settings.
+v0.4.3
+
+New Features
+(Beta) Quick Preview - You can now enable "Quick Preview" for the left and right panels. Simply click on "Show quick preview" on the panel's bottom bar. By default, the preview works for some images and text files with a size less than 1MB. If you want to enable it for videos, audio, PDFs, or increase the size limit, go to the app settings and navigate to the "General" tab. You can also toggle quick preview for current panel with Toggle quick preview command.
+v0.4.2
+
+Bug Fixes
+Copy paste fixed
+v0.4.1
+
+New Features
+Cut/Copy/Paste - You can now use Cmd+C/Cmd+X/Cmd+V between Dirent tabs and Finder. It should also work with other apps that support MacOS clipboard files protocol. Both approaches for moving nodes are supported: default one where you can use Cmd+X + Cmd+V and Finder-like one where you use Cmd+C and Option/Cmd+V.
+Move to Trash - It's now possible to move nodes to the Trash rather than removing them. The default behavior can be configured in the settings and overridden in the Delete dialog, if needed.
+"Navigate to" improvements. Icons have been added, and predefined and favorites have been merged.
+Bug Fixes
+Fixed quitting the app with the command palette open.
+Fixed the search placeholder for "Navigate to".
+v0.4.0
+
+New Features
+(Beta) Search Nodes - New command to search for nodes in directories. Type Search Nodes in the command palette, press Cmd+Shift+F, or click on the toolbar icon to experiment with this new feature. Search for nodes with custom patterns and interact with them. Stay tuned for search for text in files coming soon and Spotlight indexing support.
+Toolbar Icons Unification - Now, all default icons should be non-filled.
+Bug Fixes
+Fixed the dialog-over-dialog splash problem.
+v0.3.10
+
+Bug Fixes
+Fixed showing search dialog on app startup
+v0.3.9
+
+Bug Fixes
+Fixed app crashing when custom toolbar item was added
+v0.3.8
+
+New Features
+Closing tabs with middle-click
+Bug Fixes
+Fixed chained command palette commands
+v0.3.7
+
+New Features
+(Beta) Compress/Extract Capability - Currently supported archives are ZIP/RAR/7Z. New commands Compress and Extract have been added to the command palette and context menu. Both commands can be executed within the dialog or queued up as a background task.
+Indeterminate Progress Bars - For operations where progress cannot be estimated, progress bars will show an indeterminate animation.
+All operations that create directories now support recursion - This means you can create deep directories like this: /...existing/new1/new2/new3.
+Bug Fixes
+Fixed scrolling issues in the nodes list.
+Closing the background tasks popup no longer closes the app.
+Closing the command palette should now properly focus the list.
+Typing inside the path input no longer triggers quick search on the nodes list.
+v0.3.6
+
+New Features
+Better Release Notes dialog with link to full changeset
+Remaining rows are now colored in the same way as the ones with nodes
+Bug Fixes
+Quick Find should no longer trigger when editing path
+Drag and drop fix; it is no longer possible to drop into the panel from where the drag started
+Command palette should no longer show commands that are disabled
+It is no longer possible to trigger disabled commands with shortcuts
+v0.3.5
+
+New Features
+UX has been adjusted to match MacOS default font, input, and icon sizes
+Custom Commands tab improved; you can now see which variables are possible to use
+Bug Fixes
+Go to Previous/Go to Next location toolbar icons now correctly turn disabled if navigation is not possible
